@@ -342,16 +342,16 @@ function (_React$Component) {
     key: "updateTodo",
     value: function updateTodo(e) {
       this.todo.done = !this.todo.done;
-      this.receiveTodo(todo);
+      this.receiveTodo(this.todo);
     }
   }, {
     key: "render",
     value: function render() {
       var doneState = this.todo.done ? "Undo" : "Done";
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, this.todo.title, " -", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        onClick: this.updateTodo
+        onClick: this.updateTodo.bind(this)
       }, doneState), " -", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        onClick: this.remove
+        onClick: this.remove.bind(this)
       }, "Remove"));
     }
   }]);
